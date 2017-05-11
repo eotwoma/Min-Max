@@ -1,7 +1,15 @@
 def find_maxmin(alist):
-	alist.sort()
-	if alist[0] == alist[-1]:
-		return [len(alist)]
+
+	result = []
+	mn = min(alist)
+	mx = max(alist)
+	
+	if min(alist) == max(alist):
+		#append the number of elements
+		result.append(len(alist))
 	else:
-		return [alist[0], alist[-1]]
-		
+		result.append(mn)
+		result.append(mx)
+	return result
+
+
